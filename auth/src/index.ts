@@ -6,7 +6,7 @@ import mongoose, { ConnectOptions } from 'mongoose';
 import { currentUserRouter } from './routes/current-user';
 import { signInRouter } from './routes/signin';
 import { signOutRouter } from './routes/signout';
-import { signUpRouter } from './routes/sigup';
+import { signUpRouter } from './routes/signup';
 import { errorHandler } from './middleware/error-handler';
 import { NotFoundError } from './errors/not-found-error';
 import { createLogicalAnd } from 'typescript';
