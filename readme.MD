@@ -13,3 +13,8 @@ jwt=asdf - a key-value pair
 This is an imperative command -> we do not want to have a value listing out a config file
 
 When starting a cluster, you need to remember the different secrets manually created. Store this command in a very secure env.
+
+Testing
+
+npm install --save-dev @types/jest @types/supertest jest
+ts-jest supertest mongodb-memory-server
