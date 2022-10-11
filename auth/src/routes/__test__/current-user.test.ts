@@ -20,6 +20,5 @@ it('responds with null if not authenticated', async () => {
     .send()
     .expect(200);
 
-  console.log(response.body.currentUser);
-  // expect(response.body.currentUser).toEqual(null);
+  expect(response.body.currentUser).toEqual(null);
 });
