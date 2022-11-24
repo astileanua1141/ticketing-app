@@ -3,7 +3,7 @@ import { PasswordManager } from '../services/password-manager';
 
 // An interface that describes the properties
 // that are required to create a new User
-interface userAttrs {
+interface UserAttrs {
   email: string;
   password: string;
 }
@@ -11,7 +11,7 @@ interface userAttrs {
 // An interface that describes the properties
 // that a user model has
 interface UserModel extends mongoose.Model<UserDoc> {
-  build(attrs: userAttrs): UserDoc;
+  build(attrs: UserAttrs): UserDoc;
 }
 
 // An interface that describe the properties
@@ -53,7 +53,7 @@ userSchema.pre('save', async function (done) {
   done();
 });
 
-userSchema.statics.build = (attrs: userAttrs) => {
+userSchema.statics.build = (attrs: UserAttrs) => {
   return new User(attrs);
 };
 
