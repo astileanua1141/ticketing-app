@@ -17,4 +17,4 @@ jobs:
 
       # Finally, run our tests
       - name: Run the tests
-        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm test
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm run test
