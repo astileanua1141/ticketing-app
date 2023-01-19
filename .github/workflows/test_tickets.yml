@@ -13,8 +13,8 @@ jobs:
 
       # Install required deps for action
       - name: Install Dependencies
-        run: cd /home/runner/work/ticketing-app/ticketing-app && ls && cd tickets && pwd && npm install
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm install
 
       # Finally, run our tests
       - name: Run the tests
-        run: cd /home/runner/work/ticketing-app/tickets && npm test
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm test
