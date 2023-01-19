@@ -12,9 +12,15 @@ jobs:
           node-version: "16"
 
       # Install required deps for action
-      - name: Install Dependencies
-        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm install
+      - name: yarn install
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn install
+      
+      - name: yarn coverage
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn test --coverage
 
-      # Finally, run our tests
-      - name: Run the tests
-        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm run test
+#       - name: Install Dependencies
+#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm install
+
+#       # Finally, run our tests
+#       - name: Run the tests
+#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm run test
