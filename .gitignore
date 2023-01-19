@@ -3,3 +3,7 @@ client/node_modules/
 client/.next
 node_modules/
 .DS_Store
+.vscode/settings.json
+auth/package-lock.json
+client/package-lock.json
+tickets/package-lock.json
