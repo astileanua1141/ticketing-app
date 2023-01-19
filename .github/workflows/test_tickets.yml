@@ -1,0 +1,26 @@
+
+name: Jest /tickets
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16"
+
+      # Install required deps for action
+      - name: yarn install
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn install
+      
+      - name: yarn coverage
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn test --coverage
+
+#       - name: Install Dependencies
+#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm install
+
+#       # Finally, run our tests
+#       - name: Run the tests
+#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm run test
