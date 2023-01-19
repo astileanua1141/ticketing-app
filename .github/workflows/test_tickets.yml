@@ -1,5 +1,5 @@
 
-name: Jest
+name: Jest /tickets
 on: push
 jobs:
   test:
@@ -26,7 +26,7 @@ jobs:
             ${{ runner.os }}-
       # Change dir to tickets
       - name: Change dir to /tickets
-        run: cd /tickets
+        run: cd /home/runner/work/ticketing-app/tickets
 
       # Install required deps for action
       - name: Install Dependencies
