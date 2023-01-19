@@ -24,14 +24,11 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      # Change dir to tickets
-      - name: Change dir to /tickets
-        run: ls /home/runner/work/
 
       # Install required deps for action
       - name: Install Dependencies
-        run: npm install
+        run: cd /home/runner/work/ticketing-app/tickets && npm install
 
       # Finally, run our tests
       - name: Run the tests
-        run: npm test
+        run: cd /home/runner/work/ticketing-app/tickets && npm test
