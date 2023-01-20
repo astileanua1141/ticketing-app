@@ -1,5 +1,5 @@
 
-name: Jest /tickets
+name: Tickets Test Run & Coverage 
 on: push
 jobs:
   test:
@@ -14,20 +14,9 @@ jobs:
       # Install required deps for action
       - name: yarn install
         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn install
+        
+      - name: yarn test
+        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn test
       
       - name: yarn coverage
         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn test --coverage
-
-#       - name: Install Dependencies
-#         run: npm ci
-      
-# #       - name: Run linter
-# # #         if: ${{ matrix.lint }}
-# #         run: npm run lint
-      
-#       - name: Run tests
-#         run: npm test
-
-# #       # Finally, run our tests
-# #       - name: Run the tests
-# #         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm run test
