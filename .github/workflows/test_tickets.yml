@@ -5,21 +5,28 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
 
       # Install required deps for action
-      - name: yarn install
-        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn install
+#       - name: yarn install
+#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn install
       
-      - name: yarn coverage
-        run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn test --coverage
+#       - name: yarn coverage
+#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && yarn test --coverage
 
-#       - name: Install Dependencies
-#         run: cd /home/runner/work/ticketing-app/ticketing-app/tickets && npm install
+      - name: Install Dependencies
+        run: npm ci
+      
+      - name: Run linter
+#         if: ${{ matrix.lint }}
+        run: npm run lint
+      
+      - name: Run tests
+        run: npm test
 
 #       # Finally, run our tests
 #       - name: Run the tests
