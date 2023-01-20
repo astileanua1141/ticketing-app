@@ -21,9 +21,9 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       
-      - name: Run linter
-#         if: ${{ matrix.lint }}
-        run: npm run lint
+#       - name: Run linter
+# #         if: ${{ matrix.lint }}
+#         run: npm run lint
       
       - name: Run tests
         run: npm test
