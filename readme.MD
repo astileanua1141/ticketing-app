@@ -1,3 +1,5 @@
+[![Tickets Test Run & Coverage](https://github.com/astileanua1141/ticketing-app/actions/workflows/test_coverage_tickets.yml/badge.svg)](https://github.com/astileanua1141/ticketing-app/actions/workflows/test_coverage_tickets.yml)
+
 Some notes:
 https://kubernetes.github.io/ingress-nginx/deploy/#environment-specific-instructions
 
