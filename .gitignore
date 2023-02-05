@@ -7,3 +7,4 @@ node_modules/
 auth/package-lock.json
 client/package-lock.json
 tickets/package-lock.json
+orders/package-lock.json
