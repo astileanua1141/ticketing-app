@@ -1,0 +1,25 @@
+
+name: Orders Test Run & Coverage 
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      # Install required deps for action
+      - name: yarn install
+        run: cd /home/runner/work/ticketing-app/ticketing-app/orders && yarn install
+
+      - name: log dependency version
+        run: cd /home/runner/work/ticketing-app/ticketing-app/orders && npm list --depth=0
+        
+      - name: yarn test
+        run: cd /home/runner/work/ticketing-app/ticketing-app/orders && yarn test
+      
+      - name: yarn coverage
+        run: cd /home/runner/work/ticketing-app/ticketing-app/orders && yarn test --coverage
