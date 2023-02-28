@@ -16,7 +16,7 @@ The stars of the show, the actors of this play, here are the Services used in th
 - client
 - orders
 - tickets
--payments (todo)
+- payments (todo)
 
 - nats-test
 
