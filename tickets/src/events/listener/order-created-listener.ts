@@ -6,7 +6,7 @@ import {
 } from '@alex-asti-demo-org/common';
 import { queueGroupName } from './queue-group-name';
 import { Ticket } from '../../models/ticket';
-import { TicketUpdatedPublisher } from 'events/publishers/ticket-updated-publisher';
+import { TicketUpdatedPublisher } from '../publishers/ticket-updated-publisher';
 
 export class OrderCreatedListener extends Listener<OrderCreatedEvent> {
   subject: Subjects.OrderCreated = Subjects.OrderCreated;
