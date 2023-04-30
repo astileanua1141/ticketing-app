@@ -40,3 +40,10 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: . 
+    - image: alexandra1141/expiration
+      docker: 
+        dockerfile: Dockerfile
+      sync: 
+        manual:
+          - src: 'src/**/*.ts'
+            dest: . 
