@@ -41,6 +41,7 @@ build:
           - src: 'src/**/*.ts'
             dest: . 
     - image: alexandra1141/expiration
+      context: expiration
       docker: 
         dockerfile: Dockerfile
       sync: 
